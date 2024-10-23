@@ -139,8 +139,11 @@ function init() {
     }
     // 下
     if(ball.position.z + ballR > vLimit){
+      stopBall();
+      /*
       ball.position.z = vLimit - ballR;
       vz = -Math.abs(vz);
+      */
     }
   }
 
@@ -212,10 +215,6 @@ function init() {
       }
       else if(ball.position.x < -paddle.position.x - paddleL / 2){
         vx = -Math.abs(vx);
-      }
-      if(ball.position.z > paddle.position.z ){
-        stopBall();
-        //vz = Math.abs(vz);
       }
     }
   }
